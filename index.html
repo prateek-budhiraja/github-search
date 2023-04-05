@@ -9,10 +9,18 @@
   <title>Github | User Search</title>
 </head>
 
-<body>
-  <h1 class="text-3xl font-bold underline">
-    Hello world!
-  </h1>
+<body class="bg-gradient-to-r from-slate-900 via-gray-800 to-slate-700">
+  <h2
+    class="text-center text-transparent bg-clip-text bg-gradient-to-r from-violet-500 to-violet-400 text-4xl font-bold mt-8">
+    Github Search
+  </h2>
+  <form onsubmit="handleSearch(event)" class="md:max-w-[500px] flex gap-2 mx-auto mt-6">
+    <input placeholder="Github Username" type="text" class="w-[100%] p-2 rounded-lg focus:outline-none" />
+    <button type="submit" class="p-2 rounded-lg bg-gradient-to-r from-violet-500 to-violet-400">
+      <img class="w-[30px]" src="./images/search.png" alt="search icon">
+    </button>
+  </form>
+  <p id="error-box" class="text-center mt-2 text-red-400"></p>
 
 
 
