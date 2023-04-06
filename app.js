@@ -8,10 +8,11 @@ async function handleSearch(event) {
 	const result = await fetch(`https://api.github.com/users/${userName}`);
 	// if user does not exist then show error message and return
 	if (result.status !== 200) {
-		errorBox.innerHTML = "Username not found!!!";
+		errorBox.classList.remove("hidden");
 		return;
 	}
 	// if user exists then show user info
+	errorBox.classList.add("hidden");
 	const userInfo = await result.json();
 	showInfo(userInfo);
 }
@@ -86,6 +87,3 @@ async function setRepos(repoUrl) {
 		reposList.appendChild(repoItem);
 	});
 }
-
-// full_name => link to html_url
-// description
