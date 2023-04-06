@@ -75,6 +75,7 @@ async function setRepos(repoUrl) {
 	}
 
 	const reposList = document.getElementById("repos-list");
+	reposList.innerHTML = "";
 	reposData.forEach((repo) => {
 		const { full_name, html_url, description } = repo;
 		const repoItem = document.createElement("div");
